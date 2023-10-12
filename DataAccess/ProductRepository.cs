@@ -87,5 +87,18 @@ namespace SriBalajiBilling.DataAccess
             return results;
         }
 
+        public Product FindByProductName(string productName)
+        {
+            if (productCollection == null)
+                init();
+
+            // Define a filter to find the product by its name
+            var filter = Builders<Product>.Filter.Eq(p => p.name, productName);
+
+            // Use the filter to find the product
+            Product foundProduct = productCollection.Find(filter).FirstOrDefault();
+
+            return foundProduct;
+        }
     }
 }

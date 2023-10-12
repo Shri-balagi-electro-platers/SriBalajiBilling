@@ -32,7 +32,7 @@ namespace SriBalajiBilling.service
             if (lastBill != null)
             {
                 // Extract the last bill number and increment it
-                int lastBillNumber = int.Parse(lastBill.billNo);
+                int lastBillNumber = int.Parse(lastBill.BillNo);
                 int nextBillNumber = lastBillNumber + 1;
 
                 // Format the next bill number as a 6-digit string with leading zeros
@@ -45,6 +45,16 @@ namespace SriBalajiBilling.service
                 // No bills exist yet, start with "000001"
                 return "000001";
             }
+        }
+
+        public void saveBill()
+        {
+
+        }
+
+        internal bool savebill(Bill bill)
+        {
+            return billingRepository.Save(bill);
         }
     }
 }

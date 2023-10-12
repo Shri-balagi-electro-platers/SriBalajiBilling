@@ -22,7 +22,7 @@ namespace SriBalajiBilling.DataAccess
         public void Init()
         {
             mongoDatabase = MongoDbUtil.getDataBase();
-            billCollection = mongoDatabase.GetCollection<Bill>("billing");
+            billCollection = mongoDatabase.GetCollection<Bill>("bill");
         }
 
         public Bill GetLastBillNo()
@@ -31,9 +31,24 @@ namespace SriBalajiBilling.DataAccess
             .Sort(Builders<Bill>.Sort.Descending("billNo"))
             .Limit(1)
             .FirstOrDefault();
-
             return lastBill;
 
+        }
+
+        public bool Save(Bill bill)
+        {
+            try
+            {
+                Console.WriteLine($"debug: save(): {bill}");
+                billCollection.InsertOne(bill);
+                return true;
+            }catch (Exception ex) { 
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+
+
+            return false;
         }
 
     }

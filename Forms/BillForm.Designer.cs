@@ -43,48 +43,48 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtprice = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.txtQty = new System.Windows.Forms.TextBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.txtcgst = new System.Windows.Forms.TextBox();
+            this.txtsgst = new System.Windows.Forms.TextBox();
             this.comboproductName = new System.Windows.Forms.ComboBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.billdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.txtBillNo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dgvbill = new System.Windows.Forms.DataGridView();
             this.serialNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BillNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sgst = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cgst = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.taxAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtTotalAmount = new System.Windows.Forms.TextBox();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
+            this.txtNetPay = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvbill)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,6 +116,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(311, 209);
             this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // label1
             // 
@@ -242,22 +243,23 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 61F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 1, 1);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 158F));
+            this.tableLayoutPanel3.Controls.Add(this.txtprice, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label13, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.label11, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label12, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label14, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.label15, 5, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button1, 6, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button2, 7, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button3, 6, 1);
-            this.tableLayoutPanel3.Controls.Add(this.textBox3, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.textBox4, 3, 1);
-            this.tableLayoutPanel3.Controls.Add(this.textBox5, 4, 1);
-            this.tableLayoutPanel3.Controls.Add(this.textBox6, 5, 1);
+            this.tableLayoutPanel3.Controls.Add(this.btnSave, 6, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnPrint, 7, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnAdd, 6, 1);
+            this.tableLayoutPanel3.Controls.Add(this.txtQty, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.txtAmount, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(this.txtcgst, 4, 1);
+            this.tableLayoutPanel3.Controls.Add(this.txtsgst, 5, 1);
             this.tableLayoutPanel3.Controls.Add(this.comboproductName, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.btnDelete, 7, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 281);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
@@ -265,16 +267,17 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(830, 63);
             this.tableLayoutPanel3.TabIndex = 2;
+            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
-            // textBox1
+            // txtprice
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(252, 32);
-            this.textBox1.MaxLength = 327677;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(67, 22);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtprice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtprice.Location = new System.Drawing.Point(245, 32);
+            this.txtprice.MaxLength = 327677;
+            this.txtprice.Name = "txtprice";
+            this.txtprice.ReadOnly = true;
+            this.txtprice.Size = new System.Drawing.Size(65, 22);
+            this.txtprice.TabIndex = 5;
             // 
             // label10
             // 
@@ -288,7 +291,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(381, 0);
+            this.label13.Location = new System.Drawing.Point(372, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(52, 16);
             this.label13.TabIndex = 1;
@@ -297,7 +300,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(325, 0);
+            this.label11.Location = new System.Drawing.Point(316, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(27, 16);
             this.label11.TabIndex = 1;
@@ -306,7 +309,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(252, 0);
+            this.label12.Location = new System.Drawing.Point(245, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(38, 16);
             this.label12.TabIndex = 1;
@@ -315,7 +318,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(467, 0);
+            this.label14.Location = new System.Drawing.Point(458, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(44, 16);
             this.label14.TabIndex = 1;
@@ -324,83 +327,94 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(528, 0);
+            this.label15.Location = new System.Drawing.Point(519, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(44, 16);
             this.label15.TabIndex = 1;
             this.label15.Text = "SGST";
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Location = new System.Drawing.Point(604, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(595, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(73, 23);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button2
+            // btnPrint
             // 
-            this.button2.Location = new System.Drawing.Point(683, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "print";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPrint.Location = new System.Drawing.Point(674, 3);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 23);
+            this.btnPrint.TabIndex = 4;
+            this.btnPrint.Text = "print";
+            this.btnPrint.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnAdd
             // 
-            this.button3.Location = new System.Drawing.Point(604, 32);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "draft";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(595, 32);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(73, 23);
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // textBox3
+            // txtQty
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(325, 32);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(50, 22);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQty.Location = new System.Drawing.Point(316, 32);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.Size = new System.Drawing.Size(50, 22);
+            this.txtQty.TabIndex = 5;
+            this.txtQty.TextChanged += new System.EventHandler(this.txtQty_TextChanged);
             // 
-            // textBox4
+            // txtAmount
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(381, 32);
-            this.textBox4.MaxLength = 3276777;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(80, 22);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAmount.Location = new System.Drawing.Point(372, 32);
+            this.txtAmount.MaxLength = 3276777;
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.ReadOnly = true;
+            this.txtAmount.Size = new System.Drawing.Size(80, 22);
+            this.txtAmount.TabIndex = 5;
             // 
-            // textBox5
+            // txtcgst
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(467, 32);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(55, 22);
-            this.textBox5.TabIndex = 5;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.txtcgst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtcgst.Location = new System.Drawing.Point(458, 32);
+            this.txtcgst.Name = "txtcgst";
+            this.txtcgst.Size = new System.Drawing.Size(55, 22);
+            this.txtcgst.TabIndex = 5;
             // 
-            // textBox6
+            // txtsgst
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(528, 32);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(58, 22);
-            this.textBox6.TabIndex = 5;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.txtsgst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtsgst.Location = new System.Drawing.Point(519, 32);
+            this.txtsgst.Name = "txtsgst";
+            this.txtsgst.Size = new System.Drawing.Size(58, 22);
+            this.txtsgst.TabIndex = 5;
             // 
             // comboproductName
             // 
             this.comboproductName.FormattingEnabled = true;
             this.comboproductName.Location = new System.Drawing.Point(3, 32);
             this.comboproductName.Name = "comboproductName";
-            this.comboproductName.Size = new System.Drawing.Size(243, 24);
+            this.comboproductName.Size = new System.Drawing.Size(236, 24);
             this.comboproductName.TabIndex = 6;
+            this.comboproductName.SelectedIndexChanged += new System.EventHandler(this.comboproductName_SelectedIndexChanged);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(674, 32);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label3
             // 
@@ -415,6 +429,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.billdateTimePicker);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtBillNo);
             this.panel1.Controls.Add(this.label8);
@@ -423,6 +438,14 @@
             this.panel1.Size = new System.Drawing.Size(1187, 34);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // billdateTimePicker
+            // 
+            this.billdateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.billdateTimePicker.Location = new System.Drawing.Point(1091, 9);
+            this.billdateTimePicker.Name = "billdateTimePicker";
+            this.billdateTimePicker.Size = new System.Drawing.Size(200, 22);
+            this.billdateTimePicker.TabIndex = 3;
             // 
             // label9
             // 
@@ -451,120 +474,33 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Bill no";
             // 
-            // dataGridView1
+            // dgvbill
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvbill.AllowUserToAddRows = false;
+            this.dgvbill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvbill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvbill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.serialNo,
-            this.BillNo,
             this.productName,
             this.price,
             this.quantity,
             this.sgst,
             this.cgst,
             this.taxAmount,
-            this.discount,
             this.productAmount});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 351);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1179, 193);
-            this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.label16, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label17, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label18, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.textBox2, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.textBox7, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.textBox8, 1, 2);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(955, 550);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 3;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(227, 112);
-            this.tableLayoutPanel4.TabIndex = 6;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(3, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(86, 16);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Total Amount";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(3, 37);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(62, 16);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Discount \r\n";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(3, 74);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(52, 16);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "NetPay";
-            // 
-            // textBox8
-            // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Location = new System.Drawing.Point(118, 79);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox8.MaxLength = 2000000;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(104, 22);
-            this.textBox8.TabIndex = 1;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Location = new System.Drawing.Point(118, 42);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox7.MaxLength = 2000000;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(104, 22);
-            this.textBox7.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(118, 5);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox2.MaxLength = 2000000;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(104, 22);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.dgvbill.Location = new System.Drawing.Point(3, 351);
+            this.dgvbill.Name = "dgvbill";
+            this.dgvbill.RowHeadersWidth = 51;
+            this.dgvbill.RowTemplate.Height = 24;
+            this.dgvbill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvbill.Size = new System.Drawing.Size(1179, 193);
+            this.dgvbill.TabIndex = 5;
             // 
             // serialNo
             // 
             this.serialNo.HeaderText = "S No";
             this.serialNo.MinimumWidth = 6;
             this.serialNo.Name = "serialNo";
-            // 
-            // BillNo
-            // 
-            this.BillNo.HeaderText = "BillNo";
-            this.BillNo.MinimumWidth = 6;
-            this.BillNo.Name = "BillNo";
             // 
             // productName
             // 
@@ -602,17 +538,91 @@
             this.taxAmount.MinimumWidth = 6;
             this.taxAmount.Name = "taxAmount";
             // 
-            // discount
-            // 
-            this.discount.HeaderText = "Discount";
-            this.discount.MinimumWidth = 6;
-            this.discount.Name = "discount";
-            // 
             // productAmount
             // 
             this.productAmount.HeaderText = "Amount";
             this.productAmount.MinimumWidth = 6;
             this.productAmount.Name = "productAmount";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.label16, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label17, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label18, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.txtTotalAmount, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtDiscount, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.txtNetPay, 1, 2);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(955, 550);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 3;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(227, 112);
+            this.tableLayoutPanel4.TabIndex = 6;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(3, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(86, 16);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Total Amount";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(3, 37);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(77, 16);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Discount  %";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(3, 74);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(52, 16);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "NetPay";
+            // 
+            // txtTotalAmount
+            // 
+            this.txtTotalAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTotalAmount.Location = new System.Drawing.Point(118, 5);
+            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTotalAmount.MaxLength = 2000000;
+            this.txtTotalAmount.Name = "txtTotalAmount";
+            this.txtTotalAmount.ReadOnly = true;
+            this.txtTotalAmount.Size = new System.Drawing.Size(104, 22);
+            this.txtTotalAmount.TabIndex = 1;
+            // 
+            // txtDiscount
+            // 
+            this.txtDiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDiscount.Location = new System.Drawing.Point(118, 42);
+            this.txtDiscount.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDiscount.MaxLength = 2000000;
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(104, 22);
+            this.txtDiscount.TabIndex = 1;
+            this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged);
+            // 
+            // txtNetPay
+            // 
+            this.txtNetPay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNetPay.Location = new System.Drawing.Point(118, 79);
+            this.txtNetPay.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNetPay.MaxLength = 2000000;
+            this.txtNetPay.Name = "txtNetPay";
+            this.txtNetPay.ReadOnly = true;
+            this.txtNetPay.Size = new System.Drawing.Size(104, 22);
+            this.txtNetPay.TabIndex = 1;
             // 
             // BillForm
             // 
@@ -620,7 +630,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 674);
             this.Controls.Add(this.tableLayoutPanel4);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvbill);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tableLayoutPanel3);
@@ -636,7 +646,7 @@
             this.tableLayoutPanel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvbill)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
@@ -672,32 +682,32 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TextBox txtprice;
+        private System.Windows.Forms.TextBox txtQty;
+        private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.TextBox txtcgst;
+        private System.Windows.Forms.TextBox txtsgst;
         private System.Windows.Forms.ComboBox comboproductName;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvbill;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtTotalAmount;
+        private System.Windows.Forms.TextBox txtDiscount;
+        private System.Windows.Forms.TextBox txtNetPay;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.DateTimePicker billdateTimePicker;
         private System.Windows.Forms.DataGridViewTextBoxColumn serialNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BillNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn productName;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn sgst;
         private System.Windows.Forms.DataGridViewTextBoxColumn cgst;
         private System.Windows.Forms.DataGridViewTextBoxColumn taxAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn discount;
         private System.Windows.Forms.DataGridViewTextBoxColumn productAmount;
     }
 }

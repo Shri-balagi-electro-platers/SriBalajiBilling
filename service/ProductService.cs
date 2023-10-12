@@ -34,6 +34,11 @@ namespace SriBalajiBilling.service
             return productNames;
         }
 
+        public Product GetProductByName(string productName)
+        {
+            return productRepository.FindByProductName(productName);
+        }
+
 
 
         public List<Product> getProductByKeyword(string keyword)

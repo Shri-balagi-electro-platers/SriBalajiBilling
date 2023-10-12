@@ -44,7 +44,12 @@ namespace SriBalajiBilling.Forms
         BillForm billingForm;
         private void billingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(billingForm == null)
+            
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (billingForm == null)
             {
                 billingForm = new BillForm();
                 billingForm.MdiParent = this;
